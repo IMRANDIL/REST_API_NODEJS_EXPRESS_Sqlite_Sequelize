@@ -13,7 +13,8 @@ router.post('api/v1/post', (req, res, next) => {
         const data = RequestData(title, content);
         res.status(201).json(data);
     } catch (error) {
-        res.status(400).json(error)
+        res.status(400).json(error);
+        next(error)
     }
 
 })
