@@ -1,4 +1,4 @@
-const { DataTypes } = require('sequelize/dist');
+const { DataTypes } = require('sequelize');
 const sequelize = require('../db/db');
 
 
@@ -18,6 +18,10 @@ const Post = sequelize.define('post', {
         type: DataTypes.STRING
 
     }
+
+}, {
+    tableName: 'posts',
+    freezeTableName: true
 })
 
 
