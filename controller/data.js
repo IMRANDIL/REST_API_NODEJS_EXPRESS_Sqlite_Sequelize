@@ -14,9 +14,16 @@ const RequestData = async (title, content) => {
     return data;
 
 
+};
+
+
+const FindAllData = async () => {
+    const data = await Post.findAll();
+    return data;
 }
 
 
 
 
 module.exports = RequestData;
+module.exports = FindAllData;
