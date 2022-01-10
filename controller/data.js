@@ -5,11 +5,13 @@ const Post = require('../model/Post');
 
 
 
-const RequestData = (title, content) => {
-    Post.create({
-        title,
-        content
+const RequestData = async (title, content) => {
+    const data = await Post.create({
+        title: title,
+        content: content
     });
+
+    return data;
 
 
 }

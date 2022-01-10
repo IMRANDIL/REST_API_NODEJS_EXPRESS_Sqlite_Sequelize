@@ -15,7 +15,7 @@ const Post = sequelize.define('post', {
     },
     content: {
         allowNull: false,
-        type: DataTypes.STRING
+        type: DataTypes.STRING(1500)
 
     }
 
